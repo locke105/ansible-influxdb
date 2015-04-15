@@ -1,0 +1,8 @@
+---
+- include: debian.yaml
+  when: ansible_os_family == 'Debian'
+- name: influxdb config file
+  template:
+    src: config.toml.j2
+    dest: /opt/influxdb/shared/config.toml
+  notify: reload influxdb

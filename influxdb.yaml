@@ -1,0 +1,6 @@
+---
+- name: setup influxdb servers
+  hosts: influxdb
+  roles:
+    - influxdb
+    - grafana

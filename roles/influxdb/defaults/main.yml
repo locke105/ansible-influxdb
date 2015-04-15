@@ -1,0 +1,4 @@
+---
+influxdb_reporting_disabled: false
+influxdb_graphite_api_enabled: true
+influxdb_graphite_api_database: graphite

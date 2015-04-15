@@ -1,0 +1,13 @@
+---
+- name: download influxdb package
+  get_url:
+    url: 'http://s3.amazonaws.com/influxdb/influxdb_latest_amd64.deb'
+    dest: '/root/influxdb_latest_amd64.deb'
+- name: install influxdb packages
+  apt:
+    deb: '/root/influxdb_latest_amd64.deb'
+- name: start influxdb service
+  service:
+    name: influxdb
+    state: started
+    enabled: true
